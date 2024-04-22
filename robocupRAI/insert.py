@@ -135,7 +135,7 @@ def resetStation(host= '10.26.11.13'):
     
     data = {
         'zone': None,
-        'rotation:': 0,
+        'rotation': 0,
         'present': False,
         'pose': []
         }
