@@ -24,5 +24,10 @@ import robocupRAI
 # print(RoboCupDBA.updateStation(name= 'M-CS1', position= [-3, 3, 90]))
 # print(RoboCupDBA.resetStation())
 
-print(robocupRAI.queryCodePresent(102))
+# print(robocupRAI.queryCodePresent(102))
+
+
+# -------------- Target Station
+# print(robocupRAI.insertTargetStation(name= 'M-CS2', zone= 'M_Z22', rotation= 90))
+# print(robocupRAI.resetTargetStation())
     

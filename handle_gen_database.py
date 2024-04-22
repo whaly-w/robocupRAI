@@ -92,9 +92,30 @@ import robocupRAI as RoboCupDBA
 # RoboCupDBA.resetMap()
 
 
-
-
-
 # RoboCupDBA.blindInsert(data= {"kl": [3, 4, 5, 6]}, collection='explore_map')
 # RoboCupDBA.updateMap(zone=11, oren=270, stat=True)
+
+
+
+
+
+
+
+
+
+# -------------- Gen Target Station
+data = {
+    'name': None,
+    'type': None,
+    'rotation': 0,
+    'zone': None,
+    'state': False,
+}
+print(RoboCupDBA.blindInsert(host= '192.168.0.134', collection= 'explore_map'))
+# 
+
+
+
+
+
     

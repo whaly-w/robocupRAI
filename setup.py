@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="robocupRAI",
-    version="1.2",
+    version="1.5",
     author="whaly",
     author_email="whalykj@gmail.com",
     description="A small example package MongoDB Robo",

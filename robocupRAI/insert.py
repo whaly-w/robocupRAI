@@ -149,3 +149,38 @@ def resetStation(host= '10.26.11.13'):
     client.close()
     return res
 
+
+# Target station
+def insertTargetStation(host= '10.26.11.13', name= '', zone= '', rotation= ''):
+    client = pymongo.MongoClient(f'mongodb://{host}:27017/')
+    collection = client['robocup']['target_station']
+    
+    data = {
+        'name': name,
+        'type': name[2:4],
+        'zone': zone,
+        'rotation': int(rotation),
+        'state': False,
+    }
+
+    try:
+        result = collection.insert_one(data)
+        client.close()
+        return True
+    except:
+        client.close()
+        return False
+    
+def resetTargetStation(host= '10.26.11.13'):
+    client = pymongo.MongoClient(f'mongodb://{host}:27017/')
+    collection = client['robocup']['target_station']
+    
+    try:
+        collection.delete_many({})
+        res = True
+    except:
+        res = False
+    
+    client.close()
+    return res
+    
